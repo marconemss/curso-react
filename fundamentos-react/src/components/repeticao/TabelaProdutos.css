@@ -1,0 +1,6 @@
+.TabelaProdutos td{
+    background-color: black;
+    border-radius: 9px;
+    border-color: blue;
+    border-style: solid;
+}
