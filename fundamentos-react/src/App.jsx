@@ -10,6 +10,8 @@ import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import ParOuImpar from './components/condicional/ParOuImpar'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
 
 const hello = 'Hello React!'
 
@@ -17,6 +19,11 @@ export default function App() {
     return (
         <div className="App">
             <div className="Cards">
+                <Card titulo="Renderização Condicional" color='#0241E2'>
+                    <ParOuImpar numero={20} />
+                    <p/>
+                    <UsuarioInfo usuario = {{ nome: 'Mário'}} />
+                </Card>
                 <Card titulo="Tabela Produtos" color='#6E0000'>
                     <TabelaProdutos />
                 </Card>
