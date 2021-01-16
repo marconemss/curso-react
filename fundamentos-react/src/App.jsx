@@ -12,6 +12,8 @@ import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import ParOuImpar from './components/condicional/ParOuImpar'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
 
 const hello = 'Hello React!'
 
@@ -19,6 +21,12 @@ export default function App() {
     return (
         <div className="App">
             <div className="Cards">
+                <Card titulo="Comunicação Indireta" color="#982395">
+                    <IndiretaPai />
+                </Card>
+                <Card titulo="Comunicação Direta" color="#DC403B">
+                    <DiretaPai />
+                </Card>
                 <Card titulo="Renderização Condicional" color='#0241E2'>
                     <ParOuImpar numero={20} />
                     <p/>
