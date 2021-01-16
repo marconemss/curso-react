@@ -14,6 +14,8 @@ import ParOuImpar from './components/condicional/ParOuImpar'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
 import DiretaPai from './components/comunicacao/DiretaPai'
 import IndiretaPai from './components/comunicacao/IndiretaPai'
+import Input from './components/formulario/Input'
+import Contador from './components/contador/Contador'
 
 const hello = 'Hello React!'
 
@@ -21,6 +23,12 @@ export default function App() {
     return (
         <div className="App">
             <div className="Cards">
+                <Card titulo="Uso de Classes" color="#363635">
+                    <Contador numeroInicial={10} passo={1}/>
+                </Card>
+                <Card titulo="Componente Controlado" color="#3B5998" borda="#F5DF65">
+                    <Input />
+                </Card>
                 <Card titulo="Comunicação Indireta" color="#982395">
                     <IndiretaPai />
                 </Card>

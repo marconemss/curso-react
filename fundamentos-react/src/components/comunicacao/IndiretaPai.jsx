@@ -4,6 +4,8 @@ import IndiretaFilho from './IndiretaFilho'
 
 export default props => {
 
+    //useState retorna um array: [valor, função]
+    
     const [texto, setTexto] = useState('?')
     const [numero, setNumero] = useState(0)
     const [bool, setBool] = useState(false)
