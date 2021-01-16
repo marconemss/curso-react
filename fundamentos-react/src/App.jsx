@@ -16,6 +16,7 @@ import DiretaPai from './components/comunicacao/DiretaPai'
 import IndiretaPai from './components/comunicacao/IndiretaPai'
 import Input from './components/formulario/Input'
 import Contador from './components/contador/Contador'
+import ContadorComponente from './components/contadorComponente/ContadorComponente'
 
 const hello = 'Hello React!'
 
@@ -23,6 +24,9 @@ export default function App() {
     return (
         <div className="App">
             <div className="Cards">
+                <Card titulo="Contador Componente" color="#363635">
+                    <ContadorComponente numeroInicial={50} passo={5} />
+                </Card>
                 <Card titulo="Uso de Classes" color="#363635">
                     <Contador numeroInicial={10} passo={1}/>
                 </Card>

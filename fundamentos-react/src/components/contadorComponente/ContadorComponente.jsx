@@ -1,5 +1,14 @@
 import React, {Component} from 'react'
-import './Contador.css'
+import './ContadorComponente.css'
+import Display from './Display'
+import Botoes from './Botoes'
+import PassoForm from './PassoForm'
+
+/**
+ * Mesmo exemplo do Contador, porém, agora separado em componentes:
+ * 
+ * Display, Formulário e Botões.
+ */
 
 class Contador extends Component {
 
@@ -27,23 +36,23 @@ class Contador extends Component {
     }
 
     /**
-     * Este "+" na frente de e.target.value já converte
-     * para valor numérico!!
+     * Aqui já não tem o evento, ele recebe já o número
+     * que deverá ser atribuído a "passo". Este valor
+     * vai ser definido lá na arrowFunction do input dentro
+     * do componente PassoForm!
      */
-    setPasso = (e) => {
+    setPasso = (novoPasso) => {
         this.setState({
-            passo: +e.target.value,
+            passo: novoPasso,
         })
     }
 
     render(){
         return (
             <div className="Contador">
-                <h5>{this.state.numero}</h5>
-                <input type="number" value={this.state.passo} 
-                    onChange={this.setPasso}/>
-                <button onClick={this.decrementa}>-</button>
-                <button onClick={this.incrementa}>+</button>
+                <Display numero={this.state.numero} />
+                <PassoForm passo={this.state.passo} doSetPasso={this.setPasso} />
+                <Botoes inc={this.incrementa} dec={this.decrementa} />
             </div>
         )
     }
