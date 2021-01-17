@@ -17,12 +17,6 @@ class Contador extends Component {
         passo: this.props.passo || 1,
     }
 
-    /**
-     * Se não for uma função arrow, teria que fazer um 
-     * bind do "this", porque uma vez que a função
-     * foi chamada de dentro de um botão, o "this"
-     * não é mais a classe e sim o botão!
-     */
     incrementa = () => {
         this.setState({
             numero: this.state.numero + this.state.passo

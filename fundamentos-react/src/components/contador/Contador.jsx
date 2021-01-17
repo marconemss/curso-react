@@ -10,9 +10,7 @@ class Contador extends Component {
 
     /**
      * Se não for uma função arrow, teria que fazer um 
-     * bind do "this", porque uma vez que a função
-     * foi chamada de dentro de um botão, o "this"
-     * não é mais a classe e sim o botão!
+     * bind do "this" no construtor (topico 34)
      */
     incrementa = () => {
         this.setState({
@@ -39,7 +37,7 @@ class Contador extends Component {
     render(){
         return (
             <div className="Contador">
-                <h5>{this.state.numero}</h5>
+                <h1>{this.state.numero}</h1>
                 <input type="number" value={this.state.passo} 
                     onChange={this.setPasso}/>
                 <button onClick={this.decrementa}>-</button>

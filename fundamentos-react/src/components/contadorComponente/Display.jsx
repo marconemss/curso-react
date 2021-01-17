@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props => {
     return (
-        <h5>{props.numero}</h5>
+        <h1>{props.numero}</h1>
     )
 }
 

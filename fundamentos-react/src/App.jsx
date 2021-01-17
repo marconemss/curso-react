@@ -17,6 +17,7 @@ import IndiretaPai from './components/comunicacao/IndiretaPai'
 import Input from './components/formulario/Input'
 import Contador from './components/contador/Contador'
 import ContadorComponente from './components/contadorComponente/ContadorComponente'
+import Mega from './components/mega/Mega'
 
 const hello = 'Hello React!'
 
@@ -24,6 +25,9 @@ export default function App() {
     return (
         <div className="App">
             <div className="Cards">
+                <Card titulo="Mega Sena" color="#0AA0D9">
+                    <Mega quantidade={6} />
+                </Card>
                 <Card titulo="Contador Componente" color="#363635">
                     <ContadorComponente numeroInicial={50} passo={5} />
                 </Card>
