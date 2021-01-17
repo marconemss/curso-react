@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import './Input.css'
-
 
 export default props => {
 
@@ -23,7 +21,7 @@ export default props => {
     return (
         <div>
             <h5>{valor}</h5>
-            <div className='Input' style={{
+            <div style={{
                     display: 'flex',
                     flexDirection: 'column' }}>
                 
