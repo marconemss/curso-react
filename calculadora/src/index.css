@@ -3,6 +3,12 @@
   src: url('./fonts/RobotoMono-Thin.ttf')
 }
 
+/*
+* Este asterisco abaixo indica 'all', semelhante ao SQL: 
+* select * from...
+* Indica que esta será a fonte para todos os itens
+*/
+
 * {
   font-family: 'RobotoMono', monospace;
 }
