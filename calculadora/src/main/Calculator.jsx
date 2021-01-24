@@ -34,13 +34,30 @@ export default class Calculator extends Component {
         } else {
             const equals = operation === '='
             const currentOperation = this.state.operation
-            const values = [...this.state.values]             
-
-            try{
-                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
-            } catch(e) {
-                values[0] = this.state.values[0]
+            const values = [...this.state.values]      
+            
+            switch (currentOperation) {
+                case '+':
+                    values[0] = values[0] + values[1];
+                    break;
+                case '-':
+                    values[0] = values[0] - values[1];
+                    break;
+                case '÷':
+                    values[0] = values[0] / values[1];
+                    break;
+                case 'x':
+                    values[0] = values[0] * values[1];
+                    break;
+                default:
+                    break;
             }
+
+            // try{
+            //     values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
+            // } catch(e) {
+            //     values[0] = this.state.values[0]
+            // }
             
             values[1] = 0
 
@@ -82,11 +99,11 @@ export default class Calculator extends Component {
             <div className="calculator">
                 <Display value={this.state.displayValue} />
                 <Button label="AC" click={this.clearMemory} triple />
-                <Button label="/" click={this.setOperation} operation />
+                <Button label="÷" click={this.setOperation} operation />
                 <Button label="7" click={this.addDigit} />
                 <Button label="8" click={this.addDigit} />
                 <Button label="9" click={this.addDigit} />
-                <Button label="*" click={this.setOperation} operation />
+                <Button label="x" click={this.setOperation} operation />
                 <Button label="4" click={this.addDigit} />
                 <Button label="5" click={this.addDigit} />
                 <Button label="6" click={this.addDigit} />
