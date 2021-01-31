@@ -3,6 +3,7 @@ import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
 function calcFatorial(num){
+    if (isNaN(num)) num = 0
     const n = parseInt(num)
     if(n < 0) return -1
     if(n === 0) return 1
