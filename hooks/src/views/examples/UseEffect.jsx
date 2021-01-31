@@ -13,6 +13,7 @@ const UseEffect = (props) => {
 
     const [number, setNumber] = useState(1)
     const [fatorial, setFatorial] = useState(1)
+    const [parImpar, setParImpar] = useState('Ímpar')
 
     useEffect(function () {
         setFatorial(calcFatorial(number))
@@ -31,6 +32,14 @@ const UseEffect = (props) => {
             document.title = 'Eita!!!!!';
         } else {
             document.title = 'React App';
+        }
+    }, [number])
+
+    useEffect(function () {
+        if(number % 2 === 0){
+            setParImpar('Par');
+        } else {
+            setParImpar('Ímpar');
         }
     }, [number])
 
@@ -53,7 +62,7 @@ const UseEffect = (props) => {
             </div>
             <p />
             <SectionTitle title="Exercício 02" />
-
+            <span className="text red">{parImpar}</span>
         </div>
     )
 }
